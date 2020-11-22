@@ -52,7 +52,7 @@ Access Token を含んだヘッダを作成
 
 ```python
 API_URL = "https://notify-api.line.me/api/notify"
-token = '{Your Access Token}'
+token = 'Your Access Token'
 headers = {'Authorization': 'Bearer ' + token}
 ```
 
@@ -66,15 +66,16 @@ headers = {'Authorization': 'Bearer ' + token}
 message = 'Hello LINE Notify!!'
 payload = {'message': message}
 r = requests.port(url=API_URL,
-				  headers=headers,
-				  params=payload)
+                  headers=headers,
+                  params=payload)
 ```
 
 
 ### 画像を送信する:
 
 画像は `files` という引数に含めて `requests.post` で送ります。
-こちら `message` が空文字だと、メッセージだけでなく、画像も送られてきません。
+
+こちらも `message` が空文字だと、メッセージだけでなく、画像も送られてきません。
 
 ```python
 message = 'Message with image!!
@@ -82,15 +83,16 @@ image = './path/to/image.png'  # You can chose [png] or [jpg]
 payload = {'message': message}
 files = {'imageFile': open(image, 'rb')}
 r = requests.post(url=API_URL,
-				  headers=headers,
-				  params=payload,
-				  files=files)
+                  headers=headers,
+                  params=payload,
+                  files=files)
 ```
 
 
 ### スタンプを送信する:
 
 スタンプを送信するには `stickerId` と `stickerPackageId` という2つの ID を指定する必要があります。
+
 [各スタンプ (LINEが用意しているモノ) の2つのIDはここ](https://devdocs.line.me/files/sticker_list.pdf)から探すことができます。
 
 試しに、`stickerId=14`, `stickerPackageId=1` のスタンプを送信してみます。
@@ -100,12 +102,12 @@ r = requests.post(url=API_URL,
 ```python
 message = "message with LINE stamp"
 payload = {'message': message,
-		   'stickerId': 14,
-		   'stickerPackageId': 1
+           'stickerId': 14,
+           'stickerPackageId': 1
 }
 r = requests.post(url=API_URL,
-				  headers=headers,
-				  params=payload)
+                  headers=headers,
+                  params=payload)
 ```
 
 ### スタンプと画像を送信する
@@ -115,15 +117,15 @@ r = requests.post(url=API_URL,
 ```python
 message = "message with LINE stamp"
 payload = {'message': message,
-		   'stickerId': 14,
-		   'stickerPackageId': 1
+           'stickerId': 14,
+           'stickerPackageId': 1
 }
 image = './path/to/image.png'  # You can chose [png] or [jpg]
 files = {'imageFile': open(image, 'rb')}
 r = requests.post(url=API_URL,
-				  headers=headers,
-				  params=payload,
-				  files=files)
+                  headers=headers,
+                  params=payload,
+                  files=files)
 ```
 
 ## Links
