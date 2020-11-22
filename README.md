@@ -130,4 +130,7 @@ r = requests.post(url=API_URL,
 
 ## Links
 * [LINE Notify](https://notify-bot.line.me/my/)
+* [LINE Sticker ID list](https://devdocs.line.me/files/sticker_list.pdf)
+* [pythonでLINENotify使ってみる](https://qiita.com/pontyo4/items/10aa0ba0a17aee19e88e)
 * [PythonでLINEにメッセージを送る](https://qiita.com/moriita/items/5b199ac6b14ceaa4f7c9)
+* [LINE Notify Bot](https://github.com/moritagit/LINENotifyBot)
