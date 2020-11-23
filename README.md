@@ -128,6 +128,28 @@ r = requests.post(url=API_URL,
                   files=files)
 ```
 
+## Tips: LINE Notify Access Token の取得方法
+[LINE Notify](https://notify-bot.line.me/my/) にアクセスします。
+
+<img src="https://github.com/sudachi0114/lineNotiPy/blob/pictures/pictures/LINE_Notify_page.png" alt="" title="LINE Notify front page">
+
+だいたい、こんな感じの画面にたどり着きます。
+
+右上に「ログイン」する場所があるので、そこから LINE の ID でログインします。
+
+<img src="https://github.com/sudachi0114/lineNotiPy/blob/pictures/pictures/login_LINE.png" alt="" title="LINE Login">
+
+すると右上が「ログイン」から「ユーザ名」に変わるので、再度ここをクリックし、マイページにいきます。
+
+<img src="https://github.com/sudachi0114/lineNotiPy/blob/pictures/pictures/mypage.png" alt="" title="LINE Login">
+
+下の方にアクセストークンを発行できる場所があるので、そこからどのトークルームに属するかを選択してアクセストークンを発行すれば OK です。
+
+<img src="https://github.com/sudachi0114/lineNotiPy/blob/pictures/pictures/gen_access_token.png" alt="" title="LINE Login">
+
+あとは設計次第なのですが、環境変数に持たせてもよし、ファイルに保存して送信時に読み込ませるもよし、です。
+
+
 ## Links
 * [LINE Notify](https://notify-bot.line.me/my/)
 * [LINE Sticker ID list](https://devdocs.line.me/files/sticker_list.pdf)
